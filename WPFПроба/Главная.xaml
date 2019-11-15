@@ -1,0 +1,106 @@
+﻿<Window x:Class="WPFПроба.Главная"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFПроба"
+        mc:Ignorable="d"
+        Title="Главная" Height="450" Width="800">
+    <Grid>
+        <Menu Height="25" Grid.ColumnSpan="2" VerticalAlignment="Top" Background="Lavender" HorizontalAlignment="Stretch" >
+            <MenuItem Header="Организация">
+                <MenuItem Header="Добавить"></MenuItem>
+                <MenuItem Header="Изменить"></MenuItem>
+                <MenuItem Header="Штатное"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Кадры">
+                <MenuItem Header="Прием"></MenuItem>
+                <MenuItem Header="Увольнение"></MenuItem>
+                <MenuItem Header="Контракт">
+                    <MenuItem Header="Продление или не продление контракта"></MenuItem>
+                    <MenuItem Header="Приказ о продлении контракта"></MenuItem>
+                    <MenuItem Header="Дополнительное соглашение">
+                        <MenuItem Header="Уведомление(универсальное)"></MenuItem>
+                        <MenuItem Header="Уведомление об изменении сроков выплаты зарплат"></MenuItem>
+                        <MenuItem Header="Уведомление об изменении условий труда"></MenuItem>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="Перевод"></MenuItem>
+                <MenuItem Header="Отпуск">
+                    <MenuItem Header="Трудовой"></MenuItem>
+                    <MenuItem Header="Социальный"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Справка">
+                    <MenuItem Header="Об уровне заработной платы"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Акт выполненных работ">
+                    <MenuItem Header="Договор подряда">
+                        <MenuItem Header="По часам"></MenuItem>
+                        <MenuItem Header="Иное"></MenuItem>
+                    </MenuItem>
+                </MenuItem>
+
+            </MenuItem>
+            <MenuItem Header="Списки">
+                <MenuItem Header="Уволенные"></MenuItem>
+                <MenuItem Header="Принятые"></MenuItem>
+                <MenuItem Header="Договор подряда"></MenuItem>
+                <MenuItem Header="Штатное"></MenuItem>
+                <MenuItem Header="Не подписанные документы"></MenuItem>
+                <MenuItem Header="Иностранцы"></MenuItem>
+                <MenuItem Header="Отпуск"></MenuItem>
+                <MenuItem Header="Статистика"></MenuItem>
+                <MenuItem Header="Уведомление о продлении контрактов"></MenuItem>
+                <MenuItem Header="Отчет">
+                    <MenuItem Header="Сотрудники"></MenuItem>
+                </MenuItem>
+
+            </MenuItem>
+            <MenuItem Header="Поиск">
+                <MenuItem Header="Общий"></MenuItem>
+                <MenuItem Header="Подробный"></MenuItem>
+
+            </MenuItem>
+        </Menu>
+        <StackPanel x:Name="Кадры" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="1" Width="Auto" Height="Auto" Margin="7">
+            <TreeView Height="Auto" HorizontalAlignment="Left" Background="LightGreen">
+
+                <TreeViewItem Header="Кадры" MinWidth="250" IsExpanded="True">
+                    <TreeViewItem Header="Прием"></TreeViewItem>
+                    <TreeViewItem Header="Увольнение"></TreeViewItem>
+                    <TreeViewItem Header="Контракт" IsExpanded="True">
+                        <TreeViewItem Header="Продление или не продление контракта"></TreeViewItem>
+                        <TreeViewItem Header="Приказ о продлении контракта"></TreeViewItem>
+                        <TreeViewItem Header="Дополнительное соглашение" IsExpanded="True">
+                            <TreeViewItem Header="Уведомление(универсальное)"></TreeViewItem>
+                            <TreeViewItem Header="Уведомление об изменении сроков выплаты зарплаты"></TreeViewItem>
+                            <TreeViewItem Header="Уведомление об изменении условия труда"></TreeViewItem>
+                        </TreeViewItem>
+                    </TreeViewItem>
+                    <TreeViewItem Header="Перевод"></TreeViewItem>
+                    <TreeViewItem Header="Отпуск"></TreeViewItem>
+
+                </TreeViewItem>
+
+            </TreeView>
+        </StackPanel>
+
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="25"></RowDefinition>
+            <RowDefinition>
+
+            </RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+
+    </Grid>
+
+</Window>
