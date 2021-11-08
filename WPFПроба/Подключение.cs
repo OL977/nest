@@ -15,7 +15,7 @@ namespace WPFПроба
     {
         public int errds = 0;
         //string ConnString = @"Data Source=.\SQLEXPRESS;Initial Catalog=dataWPF;Integrated Security=SSPI";
-        string ConnString = @"Data Source=45.14.50.13\723\SQLEXPRESS,1433;Network Library=DBMSSOCN;Initial Catalog=dataWPF;User ID=User1;Password=pCh65tr_lk/";
+        string ConnString = @"Data Source=45.14.50.13\723\SQLEXPRESS,1433;Network Library=DBMSSOCN;Initial Catalog=dataWPF;User ID=User1;Password=";
 
 
         public void  Start()
@@ -42,7 +42,7 @@ namespace WPFПроба
         public static DataTable Selects(string d)            
         {
             //string ConnString = @"Data Source=.\SQLEXPRESS;Initial Catalog=dataWPF;Integrated Security=SSPI";
-            string ConnString = @"Data Source=45.14.50.13\723\SQLEXPRESS,1433;Network Library=DBMSSOCN;Initial Catalog=dataWPF;User ID=User1;Password=pCh65tr_lk/";
+            string ConnString = @"Data Source=45.14.50.13\723\SQLEXPRESS,1433;Network Library=DBMSSOCN;Initial Catalog=dataWPF;User ID=User1;Password=";
             DataTable dt = new DataTable();
             using (SqlConnection connection = new SqlConnection(ConnString))
             {
